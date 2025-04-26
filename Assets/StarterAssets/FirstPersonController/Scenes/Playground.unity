@@ -1673,6 +1673,33 @@ LightProbeGroup:
   - {x: 7.1518564, y: 2.7763042, z: -11.2319765}
   - {x: 8.993203, y: 2.3566551, z: -8.796325}
   m_Dering: 1
+--- !u!1 &941797184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1204189943898027306, guid: c4ca06000acd8f243bdaef35a717f6ab, type: 3}
+  m_PrefabInstance: {fileID: 1332977816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &941797185
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941797184}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4916348763816678100, guid: c4ca06000acd8f243bdaef35a717f6ab, type: 3}
 --- !u!82 &1259038744
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2219,6 +2246,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5002767069003449079, guid: c4ca06000acd8f243bdaef35a717f6ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 325635400}
+    - targetCorrespondingSourceObject: {fileID: 1204189943898027306, guid: c4ca06000acd8f243bdaef35a717f6ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 941797185}
   m_SourcePrefab: {fileID: 100100000, guid: c4ca06000acd8f243bdaef35a717f6ab, type: 3}
 --- !u!1 &1332977817 stripped
 GameObject:
@@ -4162,6 +4192,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: Grounded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: MoveSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: SprintSpeed
       value: 15
       objectReference: {fileID: 0}
@@ -4171,11 +4209,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: GroundLayers.m_Bits
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Height
