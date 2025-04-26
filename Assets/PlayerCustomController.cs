@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SimplePickupDrop : MonoBehaviour
+public class PlayerCustomController : MonoBehaviour
 {
     [Header("Pickup Settings")]
     public float reachDistance = 3f;           // How far you can pick things up
@@ -17,12 +18,27 @@ public class SimplePickupDrop : MonoBehaviour
     {
         HandleHoverLogging();
 
+        if (Input.GetMouseButtonDown(0))
+        {
+           if (heldObject != null)
+           {
+                var toDeleteObj = heldObject;
+                Drop();
+                Destroy(toDeleteObj);
+           }
+        }
+
         if (Input.GetMouseButtonDown(1))
         {
             if (heldObject == null)
                 TryPickup();
             else
                 Drop();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         // Smoothly follow the holdParent if holding something
