@@ -5,7 +5,6 @@ public class SimplePickupDrop : MonoBehaviour
     [Header("Pickup Settings")]
     public float reachDistance = 3f;           // How far you can pick things up
     public Transform holdParent;               // Empty GameObject in front of camera
-    public KeyCode pickKey = KeyCode.E;        // Key to pick up / drop
     public LayerMask pickableLayerMask;        // Only raycast against these layers for pickup
 
     private GameObject heldObject = null;
@@ -18,7 +17,7 @@ public class SimplePickupDrop : MonoBehaviour
     {
         HandleHoverLogging();
 
-        if (Input.GetKeyDown(pickKey))
+        if (Input.GetMouseButtonDown(1))
         {
             if (heldObject == null)
                 TryPickup();
